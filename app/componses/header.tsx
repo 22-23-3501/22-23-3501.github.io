@@ -29,7 +29,7 @@ export default function Header() {
 
       <div className="ml-10 h-full flex items-center">
         {menu.map(i => (
-          <Link href={i.route} key={i.title} className="text-2xl text-gray-100 mx-3">
+          <Link href={i.route} key={i.title} className="text-xl absolute bottom-2 right-2xl text-gray-100 mx-3">
             {i.title}
           </Link>
         ))}        
