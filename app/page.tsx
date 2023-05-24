@@ -124,10 +124,10 @@ export default function Home() {
               <Image src={user.photo} className="rounded-xl" width={257} height={290} alt="photo"/>
               <div className="bg-gray-300 rounded-lg p-4 w-3/4 -translate-y-10 translate-x-7">
                 <h2 className="text-xl font-bold text-gray-800">{user.title}</h2>
-                <p className="text-gray-700">
+                <p className="text-gray-700 font-['DidoteTextW01-Italic'] italic">
                   {user.name}
                 </p>
-                <p className="text-gray-700">
+                <p className="text-gray-700 font-['DidoteTextW01-Italic'] italic">
                   IG : <Link href={`https://www.instagram.com/${user.ig}`}>{user.ig}</Link>
                 </p>
               </div>
@@ -153,8 +153,8 @@ export default function Home() {
               <Image src={user.photo} alt="photo" width={344} height={344} className="md:h-[344px] md:w-[344px] h-[250px] w-[250px]"/>
               <div className="bg-gray-300 md:w-[344px] w-[250px] p-5">
                 <h2 className="font-bold text-gray-800 text-xl text-center">{user.title}</h2>
-                <p className="text-gray-700">{user.name}</p>
-                <p className="text-gray-700">
+                <p className="text-gray-700 font-['DidoteTextW01-Italic'] italic">{user.name}</p>
+                <p className="text-gray-700 font-['DidoteTextW01-Italic'] italic">
                   IG : <Link href={`https://www.instagram.com/${user.ig}`}>{user.ig}</Link> 
                 </p>
               </div>
@@ -164,7 +164,7 @@ export default function Home() {
       </div>
 
       <div className="mt-24">
-        <iframe className="mx-auto w-[50%]" height="315" src="https://www.youtube.com/embed/A_kgMzJCSOs" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
+        <iframe className="mx-auto max-w-[500px] w-[90%]" height="315" src="https://www.youtube.com/embed/A_kgMzJCSOs" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
       </div>
 
     </div>
