@@ -22,17 +22,17 @@ const menu = [
 
 export default function Header() {
   return (
-    <div className="w-full h-24 border-b-2 px-4 py-5 bg-blue-400 flex">
+    <div className="w-full h-20 px-4 py-5 bg-fuchsia-700 flex shadow-lg">
       <Link href="/">
         <img className="h-full" src="./logo.png" alt="logo"/>
       </Link>
 
       <div className="ml-10 h-full flex items-center">
         {menu.map(i => (
-          <Link href={i.route} key={i.title} className="text-xl absolute bottom-2 right-2xl text-gray-100 mx-3">
+          <Link href={i.route} key={i.title} className="text-lg text-gray-100 mx-3">
             {i.title}
           </Link>
-        ))}        
+        ))}
       </div>
     </div>
   );
