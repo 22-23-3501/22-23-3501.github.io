@@ -88,12 +88,12 @@ const localCadreUsers = [
 
 export default function Home() {
   return (
-    <div className="h-full mx-24">
+    <div className="h-full md:mx-14 mx-5">
       <Slide>
         {users.map(user => (
-          <div key={user.photo} className="mx-32 flex mt-10 items-end justify-center">
+          <div key={user.photo} className="lg:mx-32 mx-14 flex flex-col lg:flex-row mt-10 lg:items-end items-center justify-center">
             <Image src={user.photo} alt="photo" className="rounded-t-full" width={394} height={552}/>
-            <div className="p-8 -translate-x-9 -translate-y-9 bg-gray-300 rounded-sm text-gray-700">
+            <div className="p-8 lg:-translate-x-9 lg:-translate-y-9 bg-gray-300 rounded-sm text-gray-700 translate-x-0 translate-y-0">
               <h2 className="font-bold text-xl w-30">『{user.message}』</h2>
               <p className="mt-5 whitespace-pre-line">{user.name}</p>
             </div>
@@ -149,9 +149,9 @@ export default function Home() {
         </div>
         <div className="grid 2xl:grid-cols-2 grid-cols-1 mt-10">
           {localCadreUsers.map(user => (
-            <div key={user.name} className="flex flex-nowrap rounded-xl p-1 w-[688px] mx-auto">
-              <Image src={user.photo} alt="photo" width={344} height={344}/>
-              <div className="bg-gray-300 w-[344px] p-5">
+            <div key={user.name} className="md:flex rounded-xl p-1 md:max-w-[688px] mx-auto">
+              <Image src={user.photo} alt="photo" width={344} height={344} className="md:h-[344px] md:w-[344px] h-[250px] w-[250px]"/>
+              <div className="bg-gray-300 md:w-[344px] w-[250px] p-5">
                 <h2 className="font-bold text-gray-800 text-xl text-center">{user.title}</h2>
                 <p className="text-gray-700">{user.name}</p>
                 <p className="text-gray-700">
@@ -164,7 +164,7 @@ export default function Home() {
       </div>
 
       <div className="mt-24">
-        <iframe className="mx-auto" width="560" height="315" src="https://www.youtube.com/embed/A_kgMzJCSOs" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
+        <iframe className="mx-auto w-[50%]" height="315" src="https://www.youtube.com/embed/A_kgMzJCSOs" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
       </div>
 
     </div>
