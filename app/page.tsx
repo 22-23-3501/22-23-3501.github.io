@@ -1,20 +1,20 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
-import {useState} from "react";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
 const users = [
   {
-    photo: "liyan.jpg",
+    photo: "/liyan.jpg",
     message: "目標、努力、支持與堅持,都是我現在需要的",
     name: `2023-24年度 3501地區代表 郭立言 
 
 IG:liyan4375`
   },
   {
-    photo: "Leo.jpg",
+    photo: "/Leo.jpg",
     message: "未來的扶輪在少年!很開心能為扶輪及各位優秀的團員們服務～",
     name: "2023-24年度 3501地區主委閔 Leo"
   }
@@ -24,25 +24,25 @@ const localUser = [
   {
     title: "地區代表",
     name: "DIR Chloe  吳佳軒",
-    photo: "地區代表照片.jpg",
+    photo: "/地區代表照片.jpg",
     ig: "xy._1112",
   },
   {
     title: "中壢分區代表",
     name: "楊依芩 yy",
-    photo: "中壢分區代表_edited_edited.jpg",
+    photo: "/中壢分區代表_edited_edited.jpg",
     ig: "yy_1372",
   },
   {
     title: "新竹分區代表",
     name: "張莅奇 Charlie",
-    photo: "水電啊其.jpg",
+    photo: "/水電啊其.jpg",
     ig: "liqi838",
   },
   {
     title: "苗栗分區代表",
     name: "劉佳宜 Nina",
-    photo: "苗栗代表照片_edited.jpg",
+    photo: "/苗栗代表照片_edited.jpg",
     ig: "yi._.155"
   },
 ];
@@ -52,49 +52,47 @@ const localCadreUsers = [
     title: "地區秘書",
     name: "巫琦 David",
     ig: "w.c1126",
-    photo: "王景.jpg",
+    photo: "/王景.jpg",
   },
   {
     title: "地區財務",
     name: "吳沛涵 Eeina",
     ig: "erinawu2004",
-    photo: "地區財務.jpg",
+    photo: "/地區財務.jpg",
   },
   {
     title: "中壢分區副代表",
     name: "徐利泙 Sharon",
     ig: "lipeng_798",
-    photo: "徐立泙_edited.jpg",
+    photo: "/徐立泙_edited.jpg",
   },
   {
     title: "中壢分區秘書",
     name: "孫婉禎 Celeste",
     ig: "zhen02_94",
-    photo: "婉公.jpg",
+    photo: "/婉公.jpg",
   },
   {
     title: "新竹分區秘書",
     name: "黃寬 Henry",
     ig: "kuan_nm43",
-    photo: "黃寬.jpg",
+    photo: "/黃寬.jpg",
   },
   {
     title: "苗栗分區秘書",
     name: "林致均 Diego",
     ig: "zhijun0726",
-    photo: "治軍.jpg",
+    photo: "/治軍.jpg",
   },
 ];
 
 export default function Home() {
-  const [switchUser, setSwitchUseer] = useState(0);
-
   return (
     <div className="h-full mx-24">
       <Slide>
         {users.map(user => (
           <div key={user.photo} className="mx-32 flex mt-10 items-end justify-center">
-            <img src={user.photo} alt="photo" className="rounded-t-full h-[400px]"/>
+            <Image src={user.photo} alt="photo" className="rounded-t-full" width={394} height={552}/>
             <div className="p-8 -translate-x-9 -translate-y-9 bg-gray-300 rounded-sm text-gray-700">
               <h2 className="font-bold text-xl w-30">『{user.message}』</h2>
               <p className="mt-5 whitespace-pre-line">{user.name}</p>
@@ -123,7 +121,7 @@ export default function Home() {
         <div className="flex flex-wrap flex-row justify-center mt-10">
           {localUser.map(user => (
             <div key={user.name} className="mx-10 flex flex-col items-end">
-              <img src={user.photo} className="rounded-xl"/>
+              <Image src={user.photo} className="rounded-xl" width={257} height={290} alt="photo"/>
               <div className="bg-gray-300 rounded-lg p-4 w-3/4 -translate-y-10 translate-x-7">
                 <h2 className="text-xl font-bold text-gray-800">{user.title}</h2>
                 <p className="text-gray-700">
@@ -152,7 +150,7 @@ export default function Home() {
         <div className="grid 2xl:grid-cols-2 grid-cols-1 mt-10">
           {localCadreUsers.map(user => (
             <div key={user.name} className="flex flex-nowrap rounded-xl p-1 w-[688px] mx-auto">
-              <img src={user.photo} />
+              <Image src={user.photo} alt="photo" width={344} height={344}/>
               <div className="bg-gray-300 w-[344px] p-5">
                 <h2 className="font-bold text-gray-800 text-xl text-center">{user.title}</h2>
                 <p className="text-gray-700">{user.name}</p>
