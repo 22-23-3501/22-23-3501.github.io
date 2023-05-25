@@ -100,7 +100,7 @@ export default function Home() {
           </div>
         ))}
       </Slide>
-      <div className="mt-24 p-10 bg-gray-100 rounded-md">
+      <div className="mt-24 p-10 bg-white rounded-md">
         <div className="mx-auto max-w-[500px]">
           <h2 className="text-5xl font-bold text-center text-gray-800">22-23地區代表團</h2>
           <p className="whitespace-pre-line mt-10 text-center text-gray-700">
@@ -122,7 +122,7 @@ export default function Home() {
           {localUser.map(user => (
             <div key={user.name} className="mx-10 flex flex-col items-end">
               <Image src={user.photo} className="rounded-xl" width={257} height={290} alt="photo"/>
-              <div className="bg-gray-300 rounded-lg p-4 w-3/4 -translate-y-10 translate-x-7">
+              <div className="bg-gray-100 rounded-lg p-4 w-3/4 -translate-y-10 translate-x-7">
                 <h2 className="text-xl font-bold text-gray-800">{user.title}</h2>
                 <p className="text-gray-700 font-['DidoteTextW01-Italic'] italic">
                   {user.name}
@@ -135,7 +135,7 @@ export default function Home() {
           ))}       
         </div>
       </div>
-      <div className="mt-24 p-10 bg-gray-100 rounded-md">
+      <div className="mt-24 p-10 bg-white rounded-md">
         <div className="mx-auto max-w-[500px]">
           <h2 className="text-5xl font-bold text-center text-gray-800">22-23地區代表團幹部</h2>
           <p className="whitespace-pre-line mt-10 text-center text-gray-700">
@@ -151,7 +151,7 @@ export default function Home() {
           {localCadreUsers.map(user => (
             <div key={user.name} className="md:flex rounded-xl p-1 md:max-w-[688px] mx-auto">
               <Image src={user.photo} alt="photo" width={344} height={344} className="md:h-[344px] md:w-[344px] h-[250px] w-[250px]"/>
-              <div className="bg-gray-300 md:w-[344px] w-[250px] p-5">
+              <div className="bg-gray-100 md:w-[344px] w-[250px] p-5">
                 <h2 className="font-bold text-gray-800 text-xl text-center">{user.title}</h2>
                 <p className="text-gray-700 font-['DidoteTextW01-Italic'] italic">{user.name}</p>
                 <p className="text-gray-700 font-['DidoteTextW01-Italic'] italic">
