@@ -98,12 +98,14 @@ const localUser = [
       },
       {
         title: "中壢分區代表",
-        name: "鄧宜華 Angel",
-        ig: "_tyh127_"
+        name: "劉文茜Zoe",
+        ig: "w.w.n_1001"
       },
       {
         title: "新竹分區代表",
-        name: "idk"
+        name: "鄒俊哲Jerry",
+        ig: "jun111288",
+        photo: "/IMG_20230526_172621_098.jpg"
       },
       {
         title: "苗栗分區代表",
@@ -118,11 +120,13 @@ const localUser = [
     users: [
       {
         title: "地區代表",
-        name: "idk"
+        name: "黃筑茵Jessie",
+        ig: "jessiehuang211"
       },
       {
         title: "中壢分區代表",
-        name: "idk"
+        name: "呂翌弘Xeon",
+        ig: "kz_11.1_yee"
       },
       {
         title: "新竹分區代表",
@@ -132,7 +136,8 @@ const localUser = [
       },
       {
         title: "苗栗分區代表",
-        name: "idk"
+        name: "陳詠菁Claire",
+        ig: "yung_ching90"
       }
     ]
   }

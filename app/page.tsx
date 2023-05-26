@@ -152,9 +152,9 @@ export default function Home() {
             <div key={user.name} className="md:flex rounded-xl p-1 md:max-w-[688px] mx-auto">
               <Image src={user.photo} alt="photo" width={344} height={344} className="md:h-[344px] md:w-[344px] h-[250px] w-[250px]"/>
               <div className="bg-gray-100 md:w-[344px] w-[250px] p-5">
-                <h2 className="font-bold text-gray-800 text-xl text-center">{user.title}</h2>
-                <p className="text-gray-700 font-['DidoteTextW01-Italic'] italic">{user.name}</p>
-                <p className="text-gray-700 font-['DidoteTextW01-Italic'] italic">
+                <h2 className="font-bold text-gray-800 text-2xl text-center">{user.title}</h2>
+                <p className="text-gray-700 font-['DidoteTextW01-Italic'] italic text-xl">{user.name}</p>
+                <p className="text-gray-700 font-['DidoteTextW01-Italic'] italic text-xl">
                   IG : <Link href={`https://www.instagram.com/${user.ig}`}>{user.ig}</Link> 
                 </p>
               </div>

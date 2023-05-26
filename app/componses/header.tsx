@@ -11,7 +11,7 @@ const menu = [
   },
   {
     title: "OB故事集",
-    route: "story"
+    route: "posts"
   },
   {
     title: "地區主委團",
