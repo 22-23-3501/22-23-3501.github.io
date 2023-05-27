@@ -8,8 +8,8 @@ import Image from "next/image";
 
 export default function Page() {
   const [post, setPost] = useState<Post | null>(null);
-  const title = decodeURI(window.location.hash).slice(1);
-  console.log(title);
+  const title = decodeURI(typeof window === "undefined" ? "" : window.location.hash).slice(1);
+
   useEffect(() => {
     (async () => {
       const posts = (await axios.get<Post[]>("/posts.json")).data;

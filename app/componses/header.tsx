@@ -15,7 +15,7 @@ const menu = [
   },
   {
     title: "地區主委團",
-    route: "who"
+    route: "team"
   },
 ]
 
