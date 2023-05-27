@@ -17,10 +17,6 @@ const menu = [
     title: "地區主委團",
     route: "who"
   },
-  {
-    title: "地區蠢事集",
-    route: "stupid"
-  },
 ]
 
 export default function Header() {
