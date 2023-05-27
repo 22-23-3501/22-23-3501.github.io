@@ -6,20 +6,20 @@ import axios from "axios";
 import ReactPlayer from "react-player";
 import Image from "next/image";
 
-export default function Page({ params }: { params: { title: string } }) {
+export default function Page() {
   const [post, setPost] = useState<Post | null>(null);
-  const title = decodeURI(params.title);
-
+  const title = decodeURI(window.location.hash).slice(1);
+  console.log(title);
   useEffect(() => {
     (async () => {
       const posts = (await axios.get<Post[]>("/posts.json")).data;
 
       setPost(posts.find(post => post.title.startsWith(title)) as Post);
     })();
-  }, []);
+  }, [title]);
 
   return (
-    <div className="mx-36 mt-24 p-10 bg-white rounded-lg">
+    <div className="mx-auto mt-24 p-10 bg-white rounded-lg max-w-[1000px]">
       <h2 className="text-3xl font-bold text-gray-800">{post?.title}</h2>
       <p className="whitespace-pre-line text-gray-700 mt-6 text-lg">{post?.content}</p>
       {post?.meta.map(meta => (

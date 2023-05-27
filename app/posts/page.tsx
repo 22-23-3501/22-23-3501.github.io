@@ -30,7 +30,7 @@ export default function Posts() {
     <div className="h-full">
       <div className="flex flex-wrap md:mx-24 mt-24 justify-center">
         {posts.map(post => (
-          <Link href={`/posts/${post.title}`} key={post.title} className="bg-white block m-2 rounded-md overflow-hidden">
+          <Link href={`/posts/post/#${post.title}`} key={post.title} className="bg-white block m-2 rounded-md overflow-hidden">
             <Preview title={post.title} meta={post.meta}/>
           </Link>
         ))}
